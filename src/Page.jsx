@@ -32,6 +32,8 @@ const Page = () => {
       ) : (
         <ErrorPage></ErrorPage>
       )}
+
+      <footer><a href="https://github.com/Mikael92002/shopping_cart">Github Repo</a></footer>
     </>
   );
 };
