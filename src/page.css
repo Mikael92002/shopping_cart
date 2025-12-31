@@ -1,47 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
+  background-color: aliceblue;
 }
 
 header {
   display: flex;
-  background-color: pink;
+  background-color: #fc80a5;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-button {
-  font-size: large;
-  background-color: pink;
-  color: white;
-  cursor: pointer;
-  padding: 0px 20px;
-  border: none;
-  transition: background-color 0.2s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  font-weight: 900;
-}
-
-button:hover {
-  background-color: gray;
-}
-
-button:active {
-  background-color: rgb(72, 72, 72);
-}
-
-a {
+.header-link {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-weight: bold;
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+  padding: 10px;
 }
 
-.header-div {
+.title-div {
+  font-size: 48px;
+  font-family: "Style Script", cursive;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 100;
 }

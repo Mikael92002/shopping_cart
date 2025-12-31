@@ -5,7 +5,7 @@ import Home from "./Home";
 import { Link } from "react-router";
 import ErrorPage from "./ErrorPage";
 import "./page.css";
-import HomeIcon from "./HomeIcon";
+import ShopIcon from "./ShopIcon";
 import CartIcon from "./CartIcon";
 
 const Page = () => {
@@ -14,19 +14,12 @@ const Page = () => {
   return (
     <>
       <header>
-        <Link to="/">
-          <button>
-            <HomeIcon></HomeIcon>
-            <div className="header-div">LuxuryGoods</div>
-          </button>
+        <Link to="/shop" className="header-link"><ShopIcon></ShopIcon></Link>
+        <Link to="/" className="header-link">
+          <div className="title-div">Expensive Obsession</div>
         </Link>
-        <Link to="/shop">
-          <button>Shop</button>
-        </Link>
-        <Link to="/cart">
-          <button>
-            <CartIcon></CartIcon>
-          </button>
+        <Link to="/cart" className="header-link">
+          <CartIcon></CartIcon>
         </Link>
       </header>
 

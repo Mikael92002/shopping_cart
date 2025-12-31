@@ -6,8 +6,8 @@ const CartIcon = () => {
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink" 
-      width="20px"
-      height="20px"
+      width="25px"
+      height="25px"
       viewBox="0 0 902.86 902.86"
       xmlSpace="preserve"
     >

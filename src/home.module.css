@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.marquee_image {
+    width: 80px;
+    margin: 0px 20px;
+}
+
+.discount {
+    background-color: green;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    font-family: "Oswald";
+    font-size: large;
+}
+
+h1{
+    font-family: "Oswald";
+}
+.ad_div{
+    height: 600px;
+}
+.ad_div>img{
+border-radius: 10px;
+overflow-x: scroll;
+}

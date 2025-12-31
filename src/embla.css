@@ -1,0 +1,30 @@
+.embla {
+  max-width: 100%;
+  margin: auto;
+  --slide-spacing: 1rem;
+  --slide-size: 75%;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  align-items: center;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+  margin: 25px;
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 auto;
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  height: 100%;
+}
+
+/* Add this for the images */
+.embla__slide img {
+  display: block;
+  height: 100%;
+  border-radius: 10px;
+}
