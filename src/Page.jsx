@@ -14,11 +14,11 @@ const Page = () => {
   return (
     <>
       <header>
-        <Link to="/shop" className="header-link"><ShopIcon></ShopIcon></Link>
+        <Link to="/shop" className="header-link shop"><ShopIcon></ShopIcon></Link>
         <Link to="/" className="header-link">
           <div className="title-div">Expensive Obsession</div>
         </Link>
-        <Link to="/cart" className="header-link">
+        <Link to="/cart" className="header-link cart">
           <CartIcon></CartIcon>
         </Link>
       </header>

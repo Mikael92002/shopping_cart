@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
 
 html,
-body {
+body,
+#root {
   padding: 0;
   margin: 0;
   background-color: aliceblue;
+  min-height: 100dvh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -22,8 +30,17 @@ header {
   align-items: center;
   text-decoration: none;
   color: white;
-  transition: background-color 0.2s ease-in-out;
+  text-shadow: 1px 1px 3px black;
+  transition: text-shadow 0.2s ease-in-out;
   padding: 10px;
+}
+
+.shop, .cart{
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.453));
+  transition: filter 0.2s ease-in-out;
+}
+.shop:hover, .cart:hover{
+  filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.409));
 }
 
 .title-div {
@@ -33,9 +50,15 @@ header {
   justify-content: center;
   align-items: center;
   font-weight: 100;
+  text-shadow: 1px 1px 10px black;
+  transition: text-shadow 0.2s ease-in-out;
 }
 
-footer{
+.title-div:hover {
+  text-shadow: 1px 1px 20px black;
+}
+
+footer {
   background-color: #fc80a5;
   font-size: larger;
   padding-bottom: 1rem;

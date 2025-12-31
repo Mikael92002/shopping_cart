@@ -3,7 +3,6 @@
   margin: auto;
   --slide-spacing: 1rem;
   --slide-size: 75%;
-  border-bottom: 2px solid rgb(144, 144, 144);
 }
 .embla__viewport {
   overflow: hidden;

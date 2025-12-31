@@ -21,7 +21,7 @@ import EmblaCarousel from "./EmblaCarousel.jsx";
 import { Link } from "react-router";
 
 const Home = () => {
-  const OPTIONS = { dragFree: true };
+  const OPTIONS = { dragFree: true, loop: true };
   const SLIDES = [adOne, adTwo, adFour, adThree, adNine];
   const SLIDES2 = [adFive, adSix, adSeven, adEight, adTen];
   return (
@@ -45,8 +45,18 @@ const Home = () => {
           SHOP NOW
         </Link>
         <EmblaCarousel slides={SLIDES} options={OPTIONS}></EmblaCarousel>
-        <EmblaCarousel slides={SLIDES2}></EmblaCarousel>
+        <div className={styles.separator}></div>
+        <EmblaCarousel slides={SLIDES2} options={OPTIONS}></EmblaCarousel>
       </div>
+      <Marquee gradient={true} gradientColor="aliceblue" autoFill={true}>
+        <img src={rolex} alt="" className={styles.marquee_image} />
+        <img src={prada} alt="" className={styles.marquee_image} />
+        <img src={givenchy} alt="" className={styles.marquee_image} />
+        <img src={chanel} alt="" className={styles.marquee_image} />
+        <img src={lv} alt="" className={styles.marquee_image} />
+        <img src={coach} alt="" className={styles.marquee_image} />
+        <img src={hermes} alt="" className={styles.marquee_image} />
+      </Marquee>
     </>
   );
 };
