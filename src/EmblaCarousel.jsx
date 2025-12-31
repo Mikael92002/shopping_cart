@@ -12,7 +12,6 @@ const EmblaCarousel = (props) => {
         <div className="embla__container">
           {slides.map((imageSrc, index) => (
             <div className="embla__slide" key={index}>
-              {/* Change this div to an img tag */}
               <img
                 src={imageSrc}
                 alt={`Slide ${index}`}
