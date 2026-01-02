@@ -1,4 +1,5 @@
 import styles from "./shop.module.css";
+import { toast } from "sonner";
 
 const ShopCard = ({
   title,
@@ -16,7 +17,10 @@ const ShopCard = ({
     cartCount: cartCount,
     title: title,
     price: price,
+    rating: rating,
+    image: image,
   };
+
   return (
     <>
       <div className={styles.card_container}>
@@ -36,6 +40,7 @@ const ShopCard = ({
             onClick={() => {
               if (cartCount > 0) {
                 addToCart(shopItem);
+                toast("Item Successfully Added To Cart!");
               }
             }}
           >

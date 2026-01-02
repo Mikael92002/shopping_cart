@@ -46,9 +46,7 @@ header {
 .title-div {
   font-size: 48px;
   font-family: "Style Script", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   font-weight: 100;
   text-shadow: 1px 1px 10px black;
   transition: text-shadow 0.2s ease-in-out;
@@ -56,6 +54,19 @@ header {
 
 .title-div:hover {
   text-shadow: 1px 1px 20px black;
+}
+.cart-div{
+position: relative;
+}
+.cart-count{
+  position: absolute;
+  top:-60%;
+  right: 10%;
+  background-color: red;
+  border-radius: 20px;
+  font-weight: 900;
+  padding: 0px 10px;
+  font-family: sans-serif;
 }
 
 footer {

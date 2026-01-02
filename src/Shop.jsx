@@ -2,7 +2,12 @@ import styles from "./shop.module.css";
 import ShopItem from "./ShopItem";
 import ShopCard from "./ShopCard";
 
-const Shop = ({ productArray, handleIncreaseCart, handleDecreaseCart, addToCart }) => {
+const Shop = ({
+  productArray,
+  handleIncreaseCart,
+  handleDecreaseCart,
+  addToCart,
+}) => {
   return (
     <>
       <div className={styles.grid_container}>
@@ -18,13 +23,15 @@ const Shop = ({ productArray, handleIncreaseCart, handleDecreaseCart, addToCart 
               increaseClick={handleIncreaseCart}
               decreaseClick={handleDecreaseCart}
               cartCount={shopItem.cartCount}
-              addToCart = {addToCart}
+              addToCart={addToCart}
             ></ShopCard>
           );
         })}
       </div>
     </>
   );
+
+
 };
 
 export default Shop;

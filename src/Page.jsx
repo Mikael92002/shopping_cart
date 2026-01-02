@@ -7,6 +7,7 @@ import "./page.css";
 import ShopIcon from "./ShopIcon";
 import CartIcon from "./CartIcon";
 import { useEffect, useState } from "react";
+import { Toaster } from "sonner";
 
 const Page = () => {
   const { currPage } = useParams();
@@ -22,7 +23,6 @@ const Page = () => {
           }
         })
         .then((data) => {
-          console.log(data);
           setProductArray(() => {
             return data.map((obj) => {
               return { ...obj, cartCount: 0 };
@@ -35,7 +35,6 @@ const Page = () => {
 
   return (
     <>
-      <button onClick={logArray}>press here</button>
       <header>
         <Link to="/shop" className="header-link shop">
           <ShopIcon></ShopIcon>
@@ -44,19 +43,47 @@ const Page = () => {
           <div className="title-div">Expensive Obsession</div>
         </Link>
         <Link to="/cart" className="header-link cart">
-          <CartIcon></CartIcon>
+          <div className="cart-div">
+            <CartIcon></CartIcon>
+            <div className="cart-count">
+              {cartTotal() < 100 && cartTotal()} {cartTotal() >= 100 && "99+"}
+            </div>
+          </div>
         </Link>
       </header>
 
       {currPage === "shop" ? (
-        <Shop
-          productArray={productArray}
-          handleIncreaseCart={handleIncreaseCart}
-          handleDecreaseCart={handleDecreaseCart}
-          addToCart={addToCart}
-        ></Shop>
+        <>
+          <Toaster
+            toastOptions={{
+              style: {
+                backgroundColor: "#fc80a5",
+                fontSize: "larger",
+              },
+            }}
+            position="bottom-center"
+          ></Toaster>
+          <Shop
+            productArray={productArray}
+            handleIncreaseCart={handleIncreaseCart}
+            handleDecreaseCart={handleDecreaseCart}
+            addToCart={addToCart}
+          ></Shop>
+        </>
       ) : currPage === "cart" ? (
-        <Cart></Cart>
+        <>
+          <Toaster
+            position="bottom-center"
+            toastOptions={{
+              style: { backgroundColor: "#fc80a5", fontSize: "larger" },
+            }}
+          ></Toaster>
+          <Cart
+            cart={cart}
+            decreaseFromCart={decreaseFromCart}
+            increaseFromCart={increaseFromCart}
+          ></Cart>
+        </>
       ) : currPage === undefined ? (
         <Home></Home>
       ) : (
@@ -69,9 +96,12 @@ const Page = () => {
     </>
   );
 
-  function logArray() {
-    console.log(productArray);
-    console.log(cart);
+  function cartTotal() {
+    let totalItems = 0;
+    for (let cartItem of cart) {
+      totalItems = cartItem.cartCount + totalItems;
+    }
+    return totalItems;
   }
 
   function handleIncreaseCart(productID) {
@@ -112,6 +142,34 @@ const Page = () => {
       }
       newArr.push(product);
       return newArr;
+    });
+  }
+
+  function decreaseFromCart(product) {
+    setCart((prevCart) => {
+      let mappedArr = prevCart.map((cartItem) => {
+        if (cartItem.id === product.id) {
+          if (cartItem.cartCount > 0) {
+            return { ...cartItem, cartCount: cartItem.cartCount - 1 };
+          }
+        } else return cartItem;
+      });
+      for (let i = 0; i < mappedArr.length; i++) {
+        if (mappedArr[i].cartCount <= 0) {
+          mappedArr.splice(i, 1);
+        }
+      }
+      return mappedArr;
+    });
+  }
+
+  function increaseFromCart(product) {
+    setCart((prevCart) => {
+      return prevCart.map((cartItem) => {
+        if (cartItem.id === product.id) {
+          return { ...cartItem, cartCount: cartItem.cartCount + 1 };
+        } else return cartItem;
+      });
     });
   }
 };

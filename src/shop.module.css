@@ -5,6 +5,7 @@
     gap: 20px;
     justify-content: center;
     margin: 10px;
+    font-family: sans-serif;
 }
 
 .card_container {
@@ -16,8 +17,8 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.card_container:hover{
-transform: translate(0px, -5px);
+.card_container:hover {
+    transform: translate(0px, -5px);
 }
 
 .image_container {
@@ -30,11 +31,12 @@ transform: translate(0px, -5px);
 }
 
 .title,
-.price, .rating {
+.price,
+.rating {
     margin-left: 10px;
-    font-family: sans-serif;
 }
-.text_section{
+
+.text_section {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -42,6 +44,7 @@ transform: translate(0px, -5px);
     margin-bottom: 1rem;
     font-weight: 900;
 }
+
 .price {
     color: red;
     font-weight: 900;
@@ -55,13 +58,15 @@ transform: translate(0px, -5px);
 .rating {
     color: gold
 }
-.cart_options_container{
+
+.cart_options_container {
     width: fit-content;
     border-radius: 20px;
     font-weight: 900;
     font-size: larger;
 }
-.cart_options_container>button{
+
+.cart_options_container>button {
     background-color: #fc80a5;
     box-shadow: 0px 0px 5px gray;
     border: none;
@@ -70,14 +75,15 @@ transform: translate(0px, -5px);
     padding: 0px 10px;
     margin: 0px 5px;
     font-weight: 900;
-    color: black;
+    color: white;
+    text-shadow: 0px 0px 2px black;
     transition: background-color 0.1s ease-in
 }
 
-.cart_options_container>button:hover{
+.cart_options_container>button:hover {
     background-color: #ff9ebb;
 }
 
-.cart_options_container>button:active{
+.cart_options_container>button:active {
     background-color: #773b4d;
 }

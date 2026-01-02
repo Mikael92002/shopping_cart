@@ -28,3 +28,9 @@
   height: 100%;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 430px) {
+  .embla__container{
+    height: 250px;
+  }
+}

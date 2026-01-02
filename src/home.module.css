@@ -13,7 +13,7 @@
     font-family: "Oswald";
     font-size: large;
     position: sticky;
-    top:93px;
+    top:92px;
     z-index: 1000;
 }
 
@@ -52,7 +52,7 @@ h1 {
     margin-inline: auto;
     color: black;
     border-radius: 10px;
-    z-index: 1000;
+    z-index: 999;
     cursor: pointer;
     text-decoration: none;
     padding: 10px;
@@ -64,4 +64,13 @@ h1 {
 
 .shop_now:hover{
 background-color: #ffa8c2;
+}
+
+@media screen and (max-width: 414px) {
+  .shop_now{
+    font-size: 50px;
+  }
+  .discount{
+    top:165px;
+  }
 }
