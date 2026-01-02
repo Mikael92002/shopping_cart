@@ -48,7 +48,7 @@ const Home = () => {
         <div className={styles.separator}></div>
         <EmblaCarousel slides={SLIDES2} options={OPTIONS}></EmblaCarousel>
       </div>
-      <Marquee gradient={true} gradientColor="aliceblue" autoFill={true}>
+      <Marquee gradient={true} gradientColor="aliceblue" autoFill={true} direction="right">
         <img src={rolex} alt="" className={styles.marquee_image} />
         <img src={prada} alt="" className={styles.marquee_image} />
         <img src={givenchy} alt="" className={styles.marquee_image} />
