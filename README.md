@@ -1,20 +1,17 @@
 # Shopping Cart
 
 ## Description
-The Shopping Cart project is a web-based application that allows users to manage their shopping items in a user-friendly interface. Users can add items, remove items, and view their total price in real time.
+The Shopping Cart project is a web-based front-end only application that allows users to manage their shopping items in a user-friendly interface. Users can add items, remove items, and view their total price in real time.
 
 Live Demo: https://expensive-obsession.netlify.app/
 
 ## Features
-- **Add Items**: Users can easily add items to their shopping cart.
-- **Remove Items**: Users can remove unwanted items from the cart.
+- **Add/Remove Items**: Users can easily add/remove items to their shopping cart.
 - **Dynamic Total Calculation**: The total price updates automatically as items are added or removed.
-- **User Authentication**: Secure login features allow users to create accounts and save their carts.
+- **Marquee and Scrollable Container**: Users are presented with a live marquee and scrollable image container on the homepage.
 
 ## Technology Stack
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
+- **Frontend**: HTML, CSS, JavaScript, React
 
 ## Installation Instructions
 1. Clone the repository:
