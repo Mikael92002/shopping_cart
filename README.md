@@ -35,5 +35,3 @@ Live Demo: https://expensive-obsession.netlify.app/
 - Navigate to the main page of the application in your browser.
 - Use the provided forms to add items to your cart.
 - Review items in your cart and clear as needed.
-
-This README provides an overview of the Shopping Cart project. For further details, refer to the project's documentation and source code.
