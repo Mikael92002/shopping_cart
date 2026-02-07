@@ -1,16 +1,37 @@
-# React + Vite
+# Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+The Shopping Cart project is a web-based application that allows users to manage their shopping items in a user-friendly interface. Users can add items, remove items, and view their total price in real time.
 
-Currently, two official plugins are available:
+## Features
+- **Add Items**: Users can easily add items to their shopping cart.
+- **Remove Items**: Users can remove unwanted items from the cart.
+- **Dynamic Total Calculation**: The total price updates automatically as items are added or removed.
+- **User Authentication**: Secure login features allow users to create accounts and save their carts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technology Stack
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
 
-## React Compiler
+## Installation Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mikael92002/shopping_cart.git
+   cd shopping_cart
+   ```
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the application:
+   ```bash
+   npm start
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Usage Guide
+- Navigate to the main page of the application in your browser.
+- Use the provided forms to add items to your cart.
+- Review items in your cart and clear as needed.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This README provides an overview of the Shopping Cart project. For further details, refer to the project's documentation and source code.
